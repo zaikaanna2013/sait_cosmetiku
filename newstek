@@ -1,0 +1,45 @@
+#include<Stack.h>
+#include<iostream.h>
+#include<cstdlib.h>
+using namespace std;
+
+const int max_size=15;
+class Stack
+{
+protected:
+int var; 
+int top; 
+int max_stack[max_size]; 
+void push(); 
+{
+    max_size[++max_size] = x; 
+}
+void pop(); 
+{
+    max_size[max_size--] = 0; 
+}
+void top(); 
+{
+    return max_size[max_size--] = 0;
+}
+void size(); 
+{
+    return max_size; 
+}
+bool empty ()
+{
+    if (max_size >= 1) 
+    return true;
+    return false; 
+}
+bool full ();
+{
+     if(max_size<=1)
+     return true;
+     return false; 
+}
+};
+int main()
+{ 
+    return 0;
+}
