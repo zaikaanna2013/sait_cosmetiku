@@ -1,45 +1,72 @@
-#include<Stack.h>
-#include<iostream.h>
-#include<cstdlib.h>
+
+#include<iostream>
+#include<cstdlib>
+#include<cstdio>
 using namespace std;
 
 const int max_size=15;
 class Stack
 {
 protected:
-int var; 
-int top; 
-int max_stack[max_size]; 
-void push(); 
+    int var; 
+    //int top; 
+    int mas[100]; 
+    int size;
+public:
+    Stack();
+    void push(int x);
+    int pop();
+    int getTop();
+    int getSize();
+    bool isEmpty ();
+    bool isFull ();
+};
+
+
+
+
+Stack::Stack()
 {
-    max_size[++max_size] = x; 
+    size=0;
 }
-void pop(); 
+
+void Stack::push(int x) 
 {
-    max_size[max_size--] = 0; 
+    mas[size++] = x; 
 }
-void top(); 
+
+int Stack::pop() 
 {
-    return max_size[max_size--] = 0;
+    return mas[--size]; 
 }
-void size(); 
+
+int Stack::getTop()
 {
-    return max_size; 
+    return mas[size-1];
 }
-bool empty ()
+
+int Stack::getSize()
+{
+    return size; 
+}
+
+bool Stack::isEmpty ()
 {
     if (max_size >= 1) 
     return true;
     return false; 
 }
-bool full ();
+
+bool Stack::isFull ()
 {
      if(max_size<=1)
      return true;
      return false; 
 }
-};
+
 int main()
-{ 
+{   
+ 
+    system ("pause");
     return 0;
 }
